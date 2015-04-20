@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="Enter Vehicle Plate number | Place"/>
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:onClick="searchVehicle"
+                    android:id="@+id/vehicle_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Vehicle Plate number"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:onClick="searchLocation"
+                    android:id="@+id/location_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Place"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:text="Recent reports"
+                android:layout_marginBottom="10dp"/>
+
+            <ListView
+                android:id="@+id/list_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+            </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

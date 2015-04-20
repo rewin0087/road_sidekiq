@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:padding="8dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/searchField"
+        android:cursorVisible="false"
+        android:imeOptions="actionSearch"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/searchPseudoHint"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="@string/hint_search"
+        android:textColor="@android:color/darker_gray"
+        android:drawablePadding="5dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/clearSearchFieldButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_delete_keyword"
+        android:visibility="gone"
+        android:layout_gravity="right|center_vertical"
+        android:padding="10dp"
+        />
+
+</FrameLayout>
